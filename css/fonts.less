@@ -1,0 +1,12 @@
+.font-face(@family, @fileName, @weight: normal, @style: normal) {
+	font-family: '@{family}';
+	src: url('../fonts/@{fileName}/@{fileName}.eot');
+	src: url('../fonts/@{fileName}/@{fileName}.woff') format('woff'),
+		 url('../fonts/@{fileName}/@{fileName}.ttf') format('truetype');
+	font-weight: @weight;
+	font-style: @style;
+}
+
+.raleway(raleway, RalewayBold, bold) {
+	.font-face;
+}
