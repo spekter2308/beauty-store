@@ -1,0 +1,148 @@
+@import url(variables.less);
+
+body {
+	margin: 0;
+	font-family: @default-font;
+	font-size: 16px;
+	min-width: 320px;
+	line-height: 1.75;
+	position: relative;
+
+		.side-header {
+			min-height: 700px;
+			height: 100vh;
+			background-color: @dark;
+
+			.top-line {
+				padding-top: 40px;
+				position: absolute;
+				width: 100%;
+			}
+		}
+
+	.logo {
+		img {
+			width: 125px;
+			height: auto;
+			margin-left: 45px;
+		}
+	}
+
+	.phone {
+		position: absolute;
+		right: 85px;
+		top: 44px;
+		font-family: firasans, sans-serif;
+		font-size: 22px;
+		white-space: nowrap;
+		color: #fff;
+		.fa {
+			margin-right: 5px;
+			color: #888;
+		}
+	}
+
+	/* -------------MENU STYLE BEGIN----------------- */
+
+	.hamburger {
+		position: absolute;
+		right: 0;
+		top: 34px;
+		.hamburger-box {
+			width: 34px;
+			.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+				border-radius: 0;
+				width: 34px;
+				height: 2px;
+				background-color: #ffffff;
+			}
+		}
+	}
+
+	.mm-navbar {
+		height: auto;
+		position: relative;
+		margin-top: 20px;
+		margin-left: 20px;
+		border-bottom: none;
+
+		.mm-navbar__title {
+			padding: 0;
+
+			img {
+				width: 128px;
+				height: auto;
+				margin: 10px 0 35px;
+			}
+		}
+	}
+
+	#mm-0.mm-panel.mm-panel_has-navbar.mm-panel_opened {
+		padding: 0;
+
+		&:before {
+			height: 0;
+		}
+	}
+
+	.mm-panels>.mm-panel>.mm-listview {
+		margin: 20px 0;
+	}
+
+	.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview {
+		margin-top: 0;
+	}
+
+	.mm-menu_theme-black .mm-listitem_selected>a:not(.mm-btn_next), .mm-menu_theme-black .mm-listitem_selected>span {
+		background-color: transparent;
+		color: @assent;
+	}
+
+	.mm-listview > {
+		li {
+			transition: color .5s ease;
+			&:before {
+				font-family: FontAwesome;
+				content: "\f219";
+				position: absolute;
+				top: 10px;
+				left: 30px;
+				color: white;
+			}
+			&:after {
+				left: 15px;
+			}
+			>a {
+				padding-left: 55px;
+			}
+			&:hover{
+				color: @assent;
+				&:before {
+					transition: color .5s ease;
+					color: @assent;
+				}
+			}
+			&.active {
+				&>a {
+					//color: @assent;
+				}
+			}
+		}
+
+		
+	}
+
+
+
+	/* ------------------------MENU STYLE END---------------------------- */
+}
+
+section, header {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+}
+
+section {
+	background-color: #fff;
+}
