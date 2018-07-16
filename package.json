@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.dev.js",
     "dev": "nodemon --watch config --inspect --watch src/server src/server/main.js",
+    "build:dev": "set NODE_ENV=production&&webpack --config=config/webpack.dev.js",
     "prod": "set NODE_ENV=production&&webpack --config=config/webpack.prod.js"
   },
   "keywords": [],
@@ -56,6 +57,7 @@
     "hamburgers": "^0.9.3",
     "jquery": "^3.3.1",
     "jquery.mmenu": "^7.0.6",
-    "owl.carousel": "^2.3.4"
+    "owl.carousel": "^2.3.4",
+    "selectize": "^0.12.6"
   }
 }

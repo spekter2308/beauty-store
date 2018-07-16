@@ -15,6 +15,8 @@ require("../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css")
 require("../node_modules/owl.carousel/dist/owl.carousel.min.js")
 require("../node_modules/fotorama/fotorama.css")
 require("../node_modules/fotorama/fotorama.js")
+require("../node_modules/selectize/dist/css/selectize.default.css")
+require("../node_modules/selectize/dist/js/standalone/selectize.min.js")
 
 
 import $ from 'jquery';                 /* jquery in webpack 4 */

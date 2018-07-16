@@ -100,7 +100,7 @@ module.exports = {
             template: "./src/index.html",
 
         }),
-        
+
         new webpack.ProvidePlugin(
             {
                 $: 'jquery',

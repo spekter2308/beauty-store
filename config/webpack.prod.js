@@ -15,18 +15,18 @@ module.exports = {
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "../dist"),
-        publicPath: ""
+        publicPath: "./"
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
                 use: [
                     {
                         loader: "babel-loader"
                     }
-                ]
+                ],
+                exclude: /node_modules/
             },
             {
                 test: /\.css$/,
@@ -49,7 +49,7 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "images/[name].[ext]"
+                            name: "../[path].[name].[ext]"
                         }
                     }
                 ]
@@ -76,6 +76,14 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.ProvidePlugin(
+            {
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery',
+                'jquery': 'jquery'
+            }
+        ),
         new ExtractTextPlugin("[name].css"),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
@@ -91,8 +99,11 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new UglifyJSPlugin({
+            exclude: [
+                /fotorama\//
+              ]
         }),
-        new MinifyPlugin({}, {test: /\.js($|\?)/i}),
+        //new MinifyPlugin({}, {test: /\.js($|\?)/i}),
         new CopyWebpackPlugin(
             [
                 {from: './src/images', to: 'images'},

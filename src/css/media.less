@@ -17,6 +17,10 @@
             font-size: 25px;
         }
     }
+
+    .s-call {
+        background-size: cover;
+    }
 }
 
 @media screen and (max-width: 1099px) {
@@ -64,6 +68,24 @@
             margin: 5px 20px;
         }
     }
+
+    .s-call {
+        &:before {
+            width: 100%;
+        }
+    }
+
+    .footer-address {
+        p {
+            &:last-child {
+                font-size: 22px;
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -80,7 +102,7 @@
         height: 44px !important;
         line-height: 44px !important;
 
-        &:active{
+        &:active {
             width: 176px !important;
         }
     }
@@ -113,10 +135,49 @@
             margin: 10px 0;
             font-size: 14px;
         }
-        
+
         h2 {
             font-size: 18px;
         }
+    }
+
+    .s-rewiews {
+        .rewiew {
+            &-text {
+                padding: 0 20px 0 20px;
+            }
+        }
+        h2.text-center {
+            font-size: 25px;
+        }
+
+        .quotes {
+            margin: 0 !important;
+            &:after  {
+                right: 20px;
+            }
+            &:before {
+                left: 0;
+            }
+        }
+    }
+
+    .s-partners {
+        .owl-carousel {
+            .owl-nav {
+                >button {
+                    &.owl-prev {
+                        left: 0;
+                    }
+                    &.owl-next {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .footer-column {
+        padding-left: 30px;
     }
 }
 
