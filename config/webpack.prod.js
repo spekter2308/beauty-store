@@ -103,7 +103,7 @@ module.exports = {
                 /fotorama\//
               ]
         }),
-        //new MinifyPlugin({}, {test: /\.js($|\?)/i}),
+       // new MinifyPlugin({}, {test: /\.js($|\?)/i}),
         new CopyWebpackPlugin(
             [
                 {from: './src/images', to: 'images'},
