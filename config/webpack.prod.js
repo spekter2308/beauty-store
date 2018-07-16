@@ -49,7 +49,7 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "../[path].[name].[ext]"
+                            name: "images/[name].[ext]"
                         }
                     }
                 ]
@@ -68,7 +68,7 @@ module.exports = {
                     {
                         loader:'file-loader',
                         options: {
-                            name: '../[path].[name].[ext]'
+                            name: 'font/[name].[ext]'
                         }
                     },
                 ]
@@ -107,7 +107,7 @@ module.exports = {
         new CopyWebpackPlugin(
             [
                 {from: './src/images', to: 'images'},
-                {from: './src/fonts', to: 'fonts'}
+                //{from: './src/fonts', to: 'fonts'}
             ]
         )
     ]
